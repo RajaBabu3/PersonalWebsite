@@ -1,0 +1,43 @@
+{% extends "project.html" %}
+{% load staticfiles %}
+{% block description %}
+    <p>
+        It is a data visualization project. As name (Titanic Survival) suggest titanic was the greatest ship disaster happened in history.
+    </p>
+    <p>
+        This project was done as a part of the <i>Data Science and Machine Learning</i> course during my undergrad  in November 2016.
+        I am still learning data science and machine learning, will be adding more projects based on my work.
+    </p>
+    <p>
+        The data set for this project is downloaded from kaggle - Your Home for data science
+    </p>
+
+    <p>
+        Below video is my favourite from movie titanic
+        <iframe width="400" height="360" src="//www.youtube-nocookie.com/embed/9xoqXVjBEF8?rel=0" frameborder="0" allowfullscreen="">
+
+        </iframe>
+    </p>
+{% endblock %}
+{% block tabs %}
+    <dl class="tabs">
+        <dd class="active"><a href="#simple1">Questions</a></dd>
+        <dd><a href="#simple2">Tools Used</a></dd>
+    </dl>
+    <ul class="tabs-content">
+        <li class="active" id="simple1Tab">
+            <ul class="disk">
+                <li>How many people died? </li>
+                <li>How many were children and females?</li>
+                <li>Will class people where affected the most?</li>
+            </ul>
+        </li>
+        <li id="simple2Tab">
+            <ul class="disk">
+                <li><b>Matplotlib</b> for Use Case and Activity Diagrams</li>
+                <li><b>Jupyter Notebook</b> for Codes</li>
+                <li><b>Git</b> for version control </li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}

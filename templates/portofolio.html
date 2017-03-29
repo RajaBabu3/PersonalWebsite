@@ -1,0 +1,134 @@
+{% extends "base.html"%}
+{% block meta_description %}RB's (rajababu3) Personal Website. Projects, Publications and Technical Skills{% endblock %}
+{%block title%}Raja Babu| Portofolio | Skills and Past Work {%endblock%}
+{% load staticfiles %}
+{%block head%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/prettyphoto.css' %}"><!-- for gallery -->
+    <style type="text/css">
+        .techskill p{
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: larger;
+        }
+        .techskill span {
+            font-weight: 900;
+        }
+    </style>
+{%endblock%}
+{%block content%}
+    <!-- SUBHEADER
+    ================================================== -->
+    <div id="subheader">
+        <div class="row">
+            <div class="twelve columns">
+                <p>My Projects, Skills and Research Work</p>
+            </div>
+        </div>
+    </div>
+    <div class="hr">
+    </div>
+    <!-- CONTENT
+    ================================================== -->
+
+    <!--Projects-->
+    <div class="row">
+        <div class="twelve columns">
+            <div class="centersectiontitle" id="projects">
+                <h4>Significant Projects</h4>
+            </div>
+            <!-- CATEGORIES-->
+            <section id="options" class="clearfix">
+            <ul id="filters" class="option-set clearfix" data-option-key="filter">
+                <li><a href="#filter" data-option-value="*" class="portofoliobutton selected" onclick="set_footer_location();">Show all</a></li>
+                <li><a href="#filter" data-option-value=".course" class="portofoliobutton" onclick="set_footer_location();">Course Work</a></li>
+                <li><a href="#filter" data-option-value=".extra" class="portofoliobutton" onclick="set_footer_location();">Extra Work</a></li>
+                <li><a href="#filter" data-option-value=".ongoing" class="portofoliobutton" onclick="set_footer_location();">Ongoing</a></li>
+                <!--<li><a href="#filter" data-option-value=".industrial" class="portofoliobutton">Industrial</a></li>-->
+            </ul>
+            </section>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 20px;">
+        <div id="portofolio">
+            {% for project in project_list %}
+                <div class="three columns category {{project.style}}">
+                    <h5>{{project.name}}</h5>
+                    <p>
+                         {{project.tag}}
+                    </p>
+                    <div class="portofoliothumb">
+                        <div class="portofoliothumboverlay fouroverlay">
+                            <div class="viewgallery fourgallery">
+                                <a data-gal="prettyPhoto[gallery]" href="{% static 'images/projects/' %}{{project.folder}}/{{project.main_image}}"><img src="{% static 'images/playgal.png' %}" class="left galleryicon" alt=""> Enlarge</a>
+                            </div>
+                            <div class="inner fourdetail">
+                                <a class="projectdetail" href="/projects/{{project.folder}}">+ Project Details</a>
+                            </div>
+                        </div>
+                        <img src="{% static 'images/projects/' %}{{project.folder}}/{{project.main_image}}" class="fourimage" alt="{{project.alt_text}}" style = "box-shadow: 0px 0px 5px 2px #888888;"/>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <br/> <br/>
+    <div class="row techskill">
+        <div class="twelve columns">
+            <div class="centersectiontitle" id="skills">
+                <h4>Technical Skills</h4>
+            </div>
+            <div class="row">
+                <div class="twelve columns">
+                    This section outlines my technical ability. It is not an exhaustive list however I have tried to list
+                    most of the significant technical skills that I have learned throughout my life. While I love to expand
+                    my skill-set as much as possible, I also understand the importance of having a strong command over
+                    smaller set of tools than a weak command over larger set of tools<br/> <br/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="six columns">
+                    <p>Areas</p>
+                    <span>Data Science, Data Structures and Algorithms </span> are among my strongest abilities. <br/>
+                    I like to play around with back-end of highly scalable web applications. I also have an interest as well as sound knowledge in areas like <span>Machine Learning and Data Science</span>
+                </div>
+
+                <div class="six columns">
+                    <p>Favorite Tools</p>
+                    <span>Operating System</span> : Mac OS X Sierra, Linux (Kali) <br/>
+                    <span>IDE</span> : Eclipse, Codeblocks, Android Studio, Visual Studio<br/>
+                    <span>Text Editor</span> : Sublime Text, Geany, Emacs, Gedit, Vim <br/>
+                    <span>Other</span> : Git, Latex,Selenium, Inkscape
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="six columns">
+                    <p>Programming Languages</p>
+                    <span>Proficient</span> : C, C++, Python (inside-out)<br/>
+                    <span>Good Knowledge</span> : Java(Basics), HTML5, CSS3 <br/>
+                    <span>Still a lot to Learn</span> : C#, JS, R <br/>
+                    <i>Programming Language is just a tool, Logic is main art.</i>
+                </div>
+                <div class="six columns">
+                    <p>Libraries &amp; Frameworks</p>
+                    <span>Web</span> : Django, JQuery, Bootstrap, MySQL <br/>
+                    <span>Libraries</span> : STL, Numpy, Pandas, Scikit-learn, Matplotlib <br/>
+                    <span>Devices</span> : Android SDK, Microsoft SDK <br/>
+                    <span>Others</span> : Map-Reduce (Hadoop), Apache Spark, AdSense, After Effects <br/><br/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/> <br/>
+    <div class="hr">
+    </div>
+{% endblock %}
+
+{%block scripts %}
+    <script src="{% static 'js/jquery.isotope.min.js' %}"></script>
+    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+{% endblock %}

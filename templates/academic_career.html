@@ -1,0 +1,332 @@
+{% extends "base.html"%}
+{% block meta_description %}Raja's (rajababu3) Personal Website. My Educational Background{% endblock %}
+{%block title%}Raja Babu | Academic Career {%endblock%}
+{% load staticfiles %}
+{%block head%}
+    <style type="text/css">
+        .list_para {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        .techskill p{
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: larger;
+            text-align: center;
+        }
+        .techskill span {
+            font-weight: 900;
+        }
+        .title {
+            border : 1px solid #e9e9e9;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive-accordion.css' %}">
+{% endblock %}
+{% block content%}
+<div id="subheader">
+    <div class="row">
+        <div class="twelve columns">
+            <p class="left">
+                 My Academic Career
+            </p>
+            <p class="right">
+                 <a href="/career/professional">View my Professional Career</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <h1><b>Undergrad <span style="float: right;">2014 - 2018</span></b></h1>
+        <hr/>
+        <img src="{% static 'images/career/nitk.gif' %}" style="height : 100px; float: right;" />
+        <p>
+            I am currently pursuing my undergraduate education at the RNS Institute of Technology, Karnataka, Bangalore, India.
+            The academic curriculum here is pretty challenging and hectic. I attend 30+ hours of lectures and dedicate another 15+ hour for extra academic activities each week. I have been able to maintain consistency in my academic performance at RNSIT.
+        </p>
+        <p>
+            I have tried to explored a lot of opportunities in RNSIT - Open Source Contribution, Freelancing, Competitive Programming, Start Ups and Multinational Companies. In essence, I have tried to do a bit of everything. This has helped me discover myself.
+        </p>
+        <div class="centersectiontitle">
+            <h4>Quick Facts</h4>
+        </div>
+        <p class="list_para">
+            &#x2714; <b>Institute</b> : <a href="http://rnsit.ac.in/" target="_blank">RNS Institute of Technology Karnataka, Bangalore, India</a>.
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Degree</b> : Bachelor of Engineering (B.E)
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Major / Branch</b> : <a href="http://rnsit.ac.in/ise-dep.html" target="_blank">Information Science Engineering</a>
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Expected Date of Graduation</b> : 10<sup>th</sup> Aug, 2018
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Aggregate Percent</b> : {{cgpa}} / 100.00, after 4<sup>th</sup> Semester. <a href="#" target="_blank">Click here</a> to view my Transcript.
+        </p>
+        <br/>
+        
+        <ul class="responsive-accordion accordion">
+            <li>
+                <div class="responsive-accordion-head title">
+                    <h5>List of Courses Completed
+                    <img src="{% static 'images/arrow.png' %}" style="width: 20px; float: right; vertical-align: center;" class="arrow"/></h5>
+                </div>
+                <div class="responsive-accordion-panel content">
+                    <div class="row techskill">
+                        <div class="six columns">
+                            <ul>
+                                {% for course in course_left %}
+                                    <li>{{course}}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="six columns">
+                            <ul>
+                                {% for course in course_right %}
+                                    <li>{{course}}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="twelve columns"> * = <i>ongoing courses</i> </div>
+                    </div>
+                </div>
+            </li>
+            <br/>
+            <br/>
+            <li>
+                <div class="responsive-accordion-head title" id="semwise">
+                    <h5>Semester Wise Academic Performance
+                    <img src="{% static 'images/arrow.png' %}" style="float: right; width: 20px; vertical-align: center;" class="arrow"/> </h5>
+                </div>
+                <div class="responsive-accordion-panel content">
+                    <div id="semwise_chart"></div>
+                </div>
+            </li>
+        </ul>
+        <br/>
+        <h1><b>High School <span style="float: right;">2012 - 2014</span></b></h1>
+        <hr/>
+        <img src="{% static 'images/career/JP-University-Chapra-300x277.jpg' %}" style="height : 90px; float: right;" />
+        <p>
+            I attended Gopeshwar College, Hathwa, as a distant education to complete my 12th,
+            I dedicated major chuck of my time towards preparation of engineering entrance examinations in India - IIT-JEE 2014 and JEE Mains 2014.
+            I attended <a href="http://www.resonance.ac.in/">Resonance </a>, Kota a renowned training center for engineering entrance examinations.
+            At Resonance, I was enrolled in 2 year classroom program course with 18 hrs of classroom
+            teaching each week.
+        </p>
+        <div class="centersectiontitle">
+            <h4>Quick Facts</h4>
+        </div>
+        <p class="list_para">
+            &#x2714; <b>School</b> : Gopeshwar College, Hathwa
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Affiliation</b> : Bihar Board of Secondary Education (BBSE)
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Stream</b> : Science
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Subjects</b> : English, Physics, Chemistry, Mathematics and Hindi
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Final Score</b> : 69%
+        </p>
+        <br/>
+        <h1><b>Primary School <span style="float: right;">2004 - 2012</span></b></h1>
+        <hr/>
+        <img src="{% static 'images/career/Bokaro_Public_School_logo.png' %}" style="height : 80px; float: right;" />
+        <p>
+            I attended Bokaro Public Scool. I studied there for 8 years at a stretch. Academically, I was always among the best performers in the class. I also played a couple of leadership roles.
+        </p>
+        <div class="centersectiontitle">
+            <h4>Quick Facts</h4>
+        </div>
+        <p class="list_para">
+            &#x2714; <b>School</b> : <a href="http://www.bokaropublicschool.com/" target="_blank">Bokaro Public School, Bokaro</a>
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Affiliation</b> : <a href="http://www.cbse.nic.in/" target="_blank">Central Board of Secondary Education (CBSE)</a>
+        </p>
+        <p class="list_para">
+            &#x2714; <b>Score</b> : 9.6/10 CGPA. <a href="https://drive.google.com/open?id=0B6z7xhAQ16IvV1NzbmhGZmMyYlE" target="_blank">Click here</a> to view marksheet.
+        </p>
+    </div>
+</div>
+{% endblock%}
+{% block scripts %}
+    <script src="{% static 'js/responsive-accordion.js' %}"></script>
+    <script src="{% static 'js/highcharts.js'%}"></script>
+    <script type="text/javascript">
+        Highcharts.theme = {
+            colors: ["#f45b5b", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+            "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+            chart: {
+                backgroundColor: null,
+                style: {
+                    fontFamily: "Signika, serif"
+                }
+            },
+            title: {
+                style: {
+                    color: 'black',
+                    fontSize: '16px',
+                    fontWeight: 'bold'
+                }
+            },
+            subtitle: {
+                style: {
+                    color: 'black'
+                }
+            },
+            tooltip: {
+                borderWidth: 0
+            },
+            legend: {
+                itemStyle: {
+                    fontWeight: 'bold',
+                    fontSize: '13px'
+                }
+            },
+            xAxis: {
+                labels: {
+                    style: {
+                        color: '#6e6e70'
+                    }
+                }
+            },
+            yAxis: {
+                labels: {
+                    style: {
+                        color: '#6e6e70'
+                    }
+                }
+            },
+            plotOptions: {
+                series: {
+                    shadow: true
+                },
+                candlestick: {
+                    lineColor: '#404048'
+                },
+                map: {
+                    shadow: false
+                }
+            },
+
+            // Highstock specific
+            navigator: {
+                xAxis: {
+                    gridLineColor: '#D0D0D8'
+                }
+            },
+            rangeSelector: {
+                buttonTheme: {
+                    fill: 'white',
+                    stroke: '#C0C0C8',
+                    'stroke-width': 1,
+                    states: {
+                        select: {
+                            fill: '#D0D0D8'
+                        }
+                    }
+                }
+            },
+            scrollbar: {
+                trackBorderColor: '#C0C0C8'
+            },
+
+            // General
+            background2: '#E0E0E8'
+            
+        };
+
+        // Apply the theme
+        Highcharts.setOptions(Highcharts.theme);
+        function show_semwise_performance()
+        {
+            $('#semwise_chart').css('width', $('.responsive-accordion-head').first().width());
+            //$('#semwise_chart').css('background-image',"url({% static 'images/bg.png' %})");
+            $('#semwise_chart').highcharts({
+                chart: {
+                    type: 'column',
+                    plotBackgroundColor : '#FFF1F1',
+                    //plotBackgroundImage: "{% static 'images/bg.png' %}"
+
+                },
+                title: {
+                    text: 'Aggregate Percent : {{cgpa}}',
+                    style : {
+                        fontSize : '21px',
+                        fontWeight : 'bold', 
+                    }
+                },
+                xAxis: {
+                    categories: [
+                        {% for s in semwise %}
+                            'Semester {{forloop.counter}}',
+                        {% endfor %}
+                    ],
+                    title : {
+                        text : 'Semester',
+                        style : {
+                            fontSize : '17px',
+                            fontWeight : 'bold', 
+                        }
+                    },
+                },
+                yAxis: {
+                    min: 50,
+                    max : 100,
+                    title: {
+                        text: 'Semester Grade Point Assessment (SGPA)',
+                        style : {
+                            fontSize : '17px',
+                            fontWeight : 'bold', 
+                        }
+                    }
+                },
+                legend : {
+                    enabled : false
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:15px; font-weight: bold;">{point.key}</span> <br/>',
+                    pointFormat: '<span style="color:{series.color};padding:0">SGPA : </span>' +
+                        '<span style="padding:0"><b>{point.y:.2f}</b></span> <br/>',
+
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                    name: 'Grade',
+                    data: [
+                        {% for s in semwise %}
+                            {
+                                y : {{s.0}},
+
+                            },
+                        {% endfor %}
+                    ],
+                    color : '#FF7373'
+                },
+                ]
+            });
+        }
+        $('#semwise').click(function() {
+            show_semwise_performance();
+        });
+    </script>
+{% endblock%}

@@ -1,0 +1,38 @@
+{% extends "project.html" %}
+{% load staticfiles %}
+{% block description %}
+    <p>
+        It is a dynamic website which serves all functionality of ecommerce like Products Catelog, User Account, user Order and more.
+    </p>
+    <p>
+        I am currently adding more features to this project like product recommendation, payment gateway integration and coupons
+    </p>
+
+    <p>
+        Website is currently hosted on Heroku Server, For live demo <a href="https://edjango.herokuapp.com" target="_blank">Click Here</a>
+    </p>
+{% endblock %}
+{% block tabs %}
+    <dl class="tabs">
+        <dd class="active"><a href="#simple1">Features</a></dd>
+        <dd><a href="#simple2">Tools Used</a></dd>
+    </dl>
+    <ul class="tabs-content">
+        <li class="active" id="simple1Tab">
+            <ul class="disk">
+                <li>Dynamic eCommerce Website</li>
+                <li>Has Admin Interface to add Products and Manage Orders</li>
+                <li>Fast and Light weight as done in Django</li>
+                <li>User Management features</li>
+            </ul>
+        </li>
+        <li id="simple2Tab">
+            <ul class="disk">
+                <li><b>Django</b> used as Framework</li>
+                <li><b>Pycharm</b> for Codes and Design</li>
+                <li><b>Git</b> for version control </li>
+                <li><b>Heroku</b> for Hosting</li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}

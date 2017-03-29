@@ -1,0 +1,96 @@
+{% extends "base.html"%}
+{% block meta_description %}RB's (rajababu3) Personal Website ~ Internships and Trainings{% endblock %}
+{%block title%}Raja Babu | Professional Career {%endblock%}
+{% load staticfiles %}
+{%block head%}
+    <style type="text/css">
+        .list_para {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        .techskill p{
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: larger;
+            text-align: center;
+        }
+        .techskill span {
+            font-weight: 900;
+        }
+        .title {
+            border : 1px solid #e9e9e9;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive-accordion.css' %}">
+{% endblock %}
+{% block content%}
+<div id="subheader">
+    <div class="row">
+        <div class="twelve columns">
+            <p class="left">
+                 My Professional Career
+            </p>
+            <p class="right">
+                 <a href="/career/academic">View my Academic Career</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="hr">
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <p>Will be updated soon</p>
+    </div>
+</div>
+
+    <div class="row">
+    <div class="twelve columns">
+        <div class="centersectiontitle">
+            <h4>Quotes that have Inspired me</h4>
+        </div>
+        These are short but powerful quotes which have shaped me. They inspire me and keeps me motivated  all the time. Yes, there is some magic in them !
+        <div id="testimonials">
+            <blockquote>
+                <p>"There is no secret ingredient !" <cite>Kung Fu Panda</cite></p>
+            </blockquote>
+            <blockquote>
+                <p> "Remember hope is a good thing, maybe the best of things, and no good thing ever dies. Fear can hold you prisoner hope can set you free"<cite>The Shawshank Redemption</cite></p>
+            </blockquote>
+            <blockquote>
+                <p>
+                    "You might never fail on the scale I did, but some failure in life is inevitable. It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all - in which case, you fail by default." <cite>J. K. Rowling</cite>
+                </p>
+            </blockquote>
+            <blockquote>
+                <p>
+                    "It's only after we've lost everything that we're free to do anything" <cite>Tyler Durden, Fight Club (Movie)</cite>
+                </p>
+            </blockquote>
+            <blockquote>
+                <p>
+                    "Experience is what you get when you didn't get what you wanted. And experience is often the most valuable thing you have to offer." <cite>Randy Pausch, The Last Lecture</cite>
+                </p>
+            </blockquote>
+            <blockquote>
+                <p>
+                    "The training is nothing. The will is everything. The will to act ! " <cite>Ras Al Ghul, Batman Begins</cite>
+                </p>
+            </blockquote>
+            <blockquote>
+                <p>
+                    "You are not haunted by war, you miss it !" <cite>Sherlock Holmes</cite>
+                </p>
+            </blockquote>
+            <blockquote>
+                <p>
+                    "Everyday life is like programming, I guess. If you love something you can put beauty into it. " <cite>Donald Knuth</cite>
+                </p>
+            </blockquote>
+        </div>
+    </div>
+    </div>
+{% endblock%}
+{% block scripts %}
+    <script src="{% static 'js/responsive-accordion.js' %}"></script>
+{% endblock%}

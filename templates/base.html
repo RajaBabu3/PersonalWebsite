@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--  
+      Hi, I especially like people who see the page source. Let's get in touch !
+      This is the source-code of https://www.rajababu3.me
+      Author : Raja Babu
+      Year : 2017
+-->
+<html class="no-js" lang="en" style="min-height: 100%;">
+<head>
+
+    {% load staticfiles %}
+    <meta charset="utf-8"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-language" content="nl" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Data For Search Engine -->
+    <meta name="author" content="Raja Babu">
+    <meta name="description" content="{% block meta_description %}{% endblock %}">
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="2 days" />
+
+    <link href="{% static 'css/homepage.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link rel="icon" type="image/png" href="{% static 'images/face.jpg' %}">
+
+    <title>{% block title%}{%endblock%}</title>
+</head>
+<body background="{% static 'images/bg.png' %} " style="background-attachment: fixed;">
+    <!-- HIDDEN PANEL 
+    ================================================== -->
+    <div id="panel">
+        <div class="row">
+            <div class="twelve columns">
+                <img src="{% static 'images/info.png' %}" class="pics" alt="info">
+                <div class="infotext">
+                    Thank you for visiting my website. Hope you got what you were looking for :)
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="slide">
+        <a href="#" class="btn-slide"></a>
+    </p>
+
+    <!-- HEADER
+    ================================================== -->
+    <div class="row" style="">  
+        <div class="five columns">
+            <div class="logo">
+                <a href="/"><h4>Raja Babu, <span style="color: grey; font-size: 20px;">~aka (rajababu3*)</span></h4></a>
+            </div>
+        </div>
+        <div class="seven columns noleftmargin">
+            <nav id="nav-wrap">
+                <ul class="nav-bar sf-menu">
+                    <li {% if page == 'home' %} class="current" {% endif %}> <a href="/">Home</a> </li>
+                    <li {% if page == 'aboutme' %} class="current" {% endif %}> <a href="/aboutme">About Me</a> </li>
+                    <li {% if page == 'portofolio' %} class="current" {% endif %}> <a href="/portofolio">Skills</a>
+                        <ul>
+                            <li><a href="/portofolio#projects" name="projects">Projects</a></li>
+                            <li><a href="/portofolio#skills" name="skills">Technical Skills</a></li>
+                        </ul>
+                    </li>
+                    <li {% if page == 'career' %} class="current" {% endif %}> <a href="/career/academic">Career</a>
+                        <ul>
+                            <li><a href="/career/academic">Academic Career</a></li>
+                            <li><a href="/career/professional">Professional Career</a></li>
+                        </ul>
+                    </li>
+                    <li {% if page == 'achievements' %} class="current" {% endif %}> <a href="/achievements">Achievements</a> </li>
+                    <li {% if page == 'blog' %} class="current" {% endif %}> <a href="/blog">Blog</a> </li>
+                    <li {% if page == 'contact' %} class="current" {% endif %}> <a href="/contact">Contact</a> </li>
+                </ul>
+            </nav>
+        </div>  
+    </div>
+    <div class="clear">
+    </div>
+    {%block content%}{%endblock%}
+    <!-- TWITTER
+    ==================================================
+    <div class="tweetarea">
+        <div class="tweettext">
+            <div class="row">
+                <div class="twelve columns">
+                    <div class="tweet">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--<div class="fakeheight"></div>-->
+    <!-- FOOOTER 
+    ================================================== -->
+    <div id="footer">
+        <footer class="row">
+        <p class="back-top floatright">
+            <a href="#top"><span></span></a>
+        </p>
+        <div class="three columns">
+            <h1>THIS WEBSITE</h1>
+                 Powered by Django. <br/>
+                 Credits : <a href="https://jquery.com/">JQuery</a>, <a href="http://www.wowthemes.net/">WowThemes</a>, <a href="https://github.com/">GitHub</a> <br />
+                 This site is non-commercial.
+        </div>
+        <div class="two columns" style="display:table-cell; vertical-align:middle; text-align:center">
+            <img src="{% static 'images/PositiveSSL_tl_trans.png' %}" alt="Certified by Positive SSL" title="Certified by Positive SSL" border="0" />
+        </div>
+        <div class="three columns">
+            <h1>FOR NERDS</h1>
+            Connection encrypted using AES_128_GCM.
+
+        </div>
+        <div class="four columns">
+            <h1 class="newsmargin">SEARCH THIS SITE</h1>
+            <div class="row collapse newsletter floatright">
+                <div class="ten mobile-three columns">
+                    <form action="/search" method="get" target="_blank">
+                        <input type="text" class="nomargin" name="q" placeholder="Enter Keyword...">
+                </div>
+                <div class="two mobile-one columns">
+
+                    <input type="submit" class="postfix button expand" value="GO">
+                </div>
+            </div>
+        </div>
+        </footer>
+    </div>
+    <div class="copyright" style="bottom: 0; color: white;">
+        <div class="row">
+            <div class="six columns">
+                 &copy;<span class="small" style="color: white;"> 2017, Raja Babu</span>
+            </div>
+            <div class="six columns">
+                <span class="small floatright" style="color: white;">This website is powered by Django. <a href="http://www.github.com/rajababu3/PersonalWebsite" class="">See Website Code</a></span>
+            </div>
+        </div>
+    </div>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {%block head%}{%endblock%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/skins/pink.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+    <!-- JAVASCRIPTS 
+    ================================================== -->
+    <!-- Javascript files placed here for faster loading -->
+    <script src="{% static 'js/foundation.min.js' %}" ></script>   
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'js/elasticslideshow.js' %}"></script>
+    <script src="{% static 'js/jquery.carouFredSel-6.0.5-packed.js' %}"></script>
+    <script src="{% static 'js/jquery.cycle.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/modernizr.foundation.js' %}"></script>
+    <script src="{% static 'js/slidepanel.js' %}"></script>
+    <script src="{% static 'js/scrolltotop.js' %}"></script>
+    <script src="{% static 'js/hoverIntent.js' %}"></script>
+    <script src="{% static 'js/superfish.js' %}"></script>
+    <script src="{% static 'js/responsivemenu.js' %}"></script>
+    {%block scripts%}{%endblock%}
+
+    <!-- Script to change footer's position if content is not long enough-->
+    <script type="text/javascript">
+        function set_footer_location()
+        {
+            //alert('called');
+            body = document.getElementsByTagName('body')[0]
+            html = document.getElementsByTagName('html')[0]
+            bodybox = body.getBoundingClientRect();
+            htmlbox = html.getBoundingClientRect();
+            if (bodybox.bottom != htmlbox.bottom )
+            {
+                diff = (htmlbox.bottom - bodybox.bottom) + "px";
+                document.getElementsByClassName('fakeheight')[0].style.paddingTop = diff;
+            }
+        }
+        window.onload = set_footer_location();
+    </script>
+    <script type="text/javascript">
+        console.log('Woah ! Look at You!');
+        console.log('I like meeting coders, developers and hackers :)');
+        console.log("Let's get in touch ! Visit https://www.rajababu3.me/contact/");
+    </script>
+    <!-- Google Analytics Code -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-63643916-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

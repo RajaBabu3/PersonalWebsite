@@ -1,0 +1,38 @@
+{% extends "project.html" %}
+{% load staticfiles %}
+{% block description %}
+    <p>
+        It is a simple GUI based Android app that implements all basic OOP concepts using JAVA.
+    </p>
+    <p>
+        I did this project duriong my 3rd sem of Engineering, this app has more than 15,000 downloads on google play store.
+        I used Adsense to add ads in this app.
+    </p>
+    <p>
+        You can download this app from play store for demo, <a href="https://play.google.com/store/apps/details?id=com.hathtech.vtusolutions" target="_blank">Click Here to download</a> <br>
+        Caution: I stopped updating this app because of some other works, so app may mot have all notes as per current schemes. Sorry.
+    </p>
+{% endblock %}
+{% block tabs %}
+    <dl class="tabs">
+        <dd class="active"><a href="#simple1">Features</a></dd>
+        <dd><a href="#simple2">Tools Used</a></dd>
+    </dl>
+    <ul class="tabs-content">
+        <li class="active" id="simple1Tab">
+            <ul class="disk">
+                <li>No need to worry about notes and waste time searching over internet!</li>
+                <li>Download notes of current studying semester or any semester of your choice.</li>
+                <li>Download notes and keep it in your smart phone.</li>
+                <li>Notes from RNSIT, SJBIT college in Bangalore.</li>
+            </ul>
+        </li>
+        <li id="simple2Tab">
+            <ul class="disk">
+                <li><b>Android Studio</b> for codes and GUI</li>
+                <li><b>Git</b> for version control </li>
+                <li><b>Google Developer Account</b> to add app to play store</li>
+            </ul>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,191 @@
+{% extends "base.html"%}
+{% block meta_description %} RB's (rajababu3) Personal Website. A coder. Disconnected and Determined. Find out all about me !{% endblock %}
+{%block title%}Raja Babu| Home{%endblock%}
+{% load staticfiles %}
+{%block content%}
+    <!-- SLIDER 
+    ================================================== -->
+    <div id="ei-slider" class="ei-slider">
+        <ul class="ei-slider-large">
+            <li>
+            <img src="{% static 'images/slide/pantheon.jpg' %}" alt="image05" class="responsiveslide">
+            <div class="ei-title">
+                <h2>Pantheon </h2>
+                <h3>RNSIT</h3>
+            </div>
+            </li>
+            <li>
+            <img src="{% static 'images/slide/floyd.jpg' %}" alt="image01" class="responsiveslide">
+            <div class="ei-title">
+                <h2>High on</h2>
+                <h3>Music</h3>
+            </div>
+            </li>
+            <li>
+            <img src="{% static 'images/slide/IMG_0613.jpg' %}" alt="image02" class="responsiveslide">
+            <div class="ei-title">
+                <h2>It's not about </h2>
+                <h3>Winning, It's about participating</h3>
+            </div>
+            </li>
+            <li>
+            <img src="{% static 'images/slide/code.jpg' %}" alt="image03" class="responsiveslide">
+            <div class="ei-title">
+                <h2>Keep</h2>
+                <h3>Coding</h3>
+            </div>
+            </li>
+            <li>
+            <img src="{% static 'images/slide/IMG_1531.jpg' %}" alt="image04" class="responsiveslide">
+            <div class="ei-title">
+                <h2>Sis</h2>
+                <h3>Love</h3>
+            </div>
+            </li>
+            <li>
+            <img src="{% static 'images/slide/smile.png' %}" alt="image07" class="responsiveslide">
+            <div class="ei-title">
+                <h2>Always</h2>
+                <h3>Smile</h3>
+            </div>
+            </li>
+        </ul>
+        <!-- slider-thumbs -->
+        <ul class="ei-slider-thumbs">
+            <li class="ei-slider-element">Current</li>
+            <li><a href="#">Pantheon RNSIT</a><img src="{% static 'images/slide/pantheon.jpg' %}" class="slideshowthumb" alt="Pantheon"/></li>
+            <li><a href="#">Pink Floyd</a><img src="{% static 'images/slide/floyd.jpg' %}" class="slideshowthumb" alt="Pink Floyd"/></li>
+            <li><a href="#">Winning</a><img src="{% static 'images/slide/IMG_0613.jpg' %}" class="slideshowthumb" alt="Argue"/></li>
+            <li><a href="#">Code</a><img src="{% static 'images/slide/code.jpg' %}" class="slideshowthumb" alt="Code"/></li>
+            <li><a href="#">Memories</a><img src="{% static 'images/slide/IMG_1531.jpg' %}" class="slideshowthumb" alt="Memories"/></li>
+            <li><a href="#">Myself</a><img src="{% static 'images/slide/smile.jpg' %}" class="slideshowthumb" alt="Myself"/></li>
+        </ul>
+    </div>
+    <div class="minipause"> </div>
+    <!-- SUBHEADER
+    ================================================== -->
+    <div id="subheader">
+        <div class="row">
+            <div class="twelve columns">
+                <p class="text-center">
+                     "Happiness is easy. It is just a change of mind"
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- ANIMATED COLUMNS 
+    ================================================== -->
+    <div class="row">
+        <div class="twelve columns">
+            <ul class="ca-menu" id="hell">
+                <li>
+                <a href="/aboutme" title='About Me'>
+                <span class="ca-icon">U</span>
+                <div class="ca-content">
+                    <h2 class="ca-main">Know Me</h2>
+                    <h3 class="ca-sub">Find Out More About Me</h3>
+                </div>
+                </a>
+                </li>
+                <li>
+                <a href="https://www.github.com/rajababu3">
+                <span class="ca-icon">H</span>
+                <div class="ca-content">
+                    <h2 class="ca-main">Work Sample</h2>
+                    <h3 class="ca-sub">Codes Written By Me</h3>
+                </div>
+                </a>
+                </li>
+                <li>
+                <a href="/contact">
+                <span class="ca-icon">e</span>
+                <div class="ca-content">
+                    <h2 class="ca-main">Contact Me</h2>
+                    <h3 class="ca-sub">Say Hi ! to me</h3>
+                </div>
+                </a>
+                </li>
+                <li>
+                <a href="https://www.dropbox.com/s/g6o3r2loamdmqd9/RB%20Resume.pdf?dl=0">
+                <span class="ca-icon">K</span>
+                <div class="ca-content">
+                    <h2 class="ca-main">Resume</h2>
+                    <h3 class="ca-sub">Download in PDF</h3>
+                </div>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- CONTENT 
+    ================================================== -->
+    <div class="row">
+        <div class="twelve columns">
+            <p>
+                Hi, I am Raja Babu, a senior year undergrad student from India. I code and just code. I love to travel and meet new people. Currently, I am actively seeking a full-time software engineering role anywhere around the globe. Peer Group, Work Quality and Growth Opportunities are the most important things I am looking for in a job. To know more about me <a href="/aboutme">click here</a>.
+            </p>
+            <div class="centersectiontitle">
+                <h4>At A Glance</h4>
+            </div>
+        </div>
+        <div class="four columns">
+            <h5>Education</h5>
+            <p>
+                Undergraduate Student at RNS Institute of Technology, Karnataka, Bangalore, India.
+                <br/>
+                Major in Information Technology
+                <br/>
+                Batch of 2018
+            </p>
+            <p>
+                <a href="/career/academic" class="readmore" title="RB's Academic Career">Learn more</a>
+            </p>
+        </div>
+        <div class="four columns">
+            <h5>From</h5>
+            <p>
+                Born and brought up in Hathwa, Bihar India.
+                <br/>
+                Currently living in the city of Bangalore, Karnataka, India.
+            </p>
+            <p>
+                <a href="/aboutme" class="readmore" title="RB's Personal Life">Know more</a>
+            </p>
+        </div>
+        <div class="four columns">
+            <h5>Experience</h5>
+            <p>
+                Founded Indiaedeals.com - A Coupon and Cashback website
+                <br/>
+                Past Work - PrepJEE - Website for JEE Students <br/>
+                Open Source Contributions
+            </p>
+            <p>
+                <a href="/career/professional" class="readmore" title="RB's Professional Career">See more</a>
+            </p>
+        </div>
+    </div>
+    <div class="hr">
+    </div>
+    <div class="row">
+    <div class="twelve columns">
+        <div class="centersectiontitle">
+            <h4>Testimonials</h4>
+        </div>
+        Here you can see what my friends, relatives, colleagues and others have to say about me. <br/> <br/>
+        {% if testimonial_list|length == 0 %}
+            No testimonial to display :( Be the first one to write a testimonial for me :) <br/> <br/>
+        {% else %}
+            {% for test in testimonial_list %}
+                <blockquote><i>"{{test.content}}"</i></blockquote>
+                <cite> ~ {{test.author}}, {{test.conection}}</cite>
+                <br />
+                <br />
+            {% endfor %}
+        {% endif %}
+        If you want to write a testimonial for me <a href="/add_testimonial" title="Write Testimionial for Raja Babu">click here</a>.
+    </div>
+</div>
+    
+{%endblock%}
+{%block scripts%}{%endblock%}

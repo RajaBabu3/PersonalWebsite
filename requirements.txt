@@ -1,0 +1,11 @@
+Django
+dj-database-url
+dj-static
+gunicorn
+psycopg2
+django-toolbelt
+static3
+ordereddict
+django-hosts
+whitenoise
+pytz

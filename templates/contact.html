@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block meta_description %}RB's (rajababu3) Personal Website. Contact Details {% endblock %}
+{% block title %}Raja Babu | Contact Me{% endblock %}
+{% load staticfiles %}
+{% block head %}{% endblock %}
+{% block content %}
+    <div id="subheader">
+        <div class="row">
+            <div class="twelve columns">
+                <p class="left">
+                     Contact Me
+                </p>
+                <p class="right">
+                     Get in touch today !
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="hr"></div>
+    <div class="row">
+        <div class="twelve columns">
+            <div class="wrapcontact">
+                {% if message %}
+                    <div class="done alert-box {{messagetype}}">
+                        {{message}} <a href="" class="close">x</a>
+                    </div>
+                {% endif %}
+                <h5>Ping me Quickly</h5>
+                <div class="sociallist twelve columns">
+                    <span class="socialemail"></span>Email : rajababu3 [at] icloud [dot] com <br /> <br />
+                    <span class="socialphone"></span>Phone : <a href="tel:+919852954321">+91 98529 54321</a> <br /><br/>
+                    <br /> <br/> <br/>
+                </div>
+
+                <div class="hr"></div>
+                <h5>Or Visit Me</h5>
+                <div class="sociallist three columns">
+                    <span class="socialhome"></span>Permanent Address :
+                </div>
+                <div class="three columns">
+                    Dextro Apartment, <br/>
+                    Rajan Communication,Mirganj <br/>
+                    Gopalganj - 841438, BR, India<br/>
+{#                    <a href="https://www.google.co.in/maps/dir/''/Mirganj,+Bihar,+India/@26.3695683,84.2657589,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3993016b78aa4145:0xfaaae3dad6905642!2m2!1d84.3357992!2d26.3695853">View on Google Maps</a> <br /><br/> <br/>#}
+                </div>
+                <div class="sociallist three columns">
+                    <span class="socialhome"></span>Current Address :
+                </div>
+                <div class="three columns">
+                    802, Gayatri Apartment <br/>
+                    Near RNS Institute of Technology <br/>
+                    Bangalore - 560098, KR, India<br/>
+{#                    <a href="https://maps.google.com/maps?q=13.007919,74.794966">View on Google Maps</a> <br /> <br/> <br/>#}
+                </div>
+
+                <h5>Or Leave A Message For Me</h5>
+                <form method="post" action="/contact" id="contactform">
+                    {% csrf_token %}
+                    <div class="form">
+                        <div class="six columns noleftmargin">
+                            <label>Name</label>
+                            <input type="text" name="name" class="smoothborder" placeholder="Your name *"/ maxlength="100">
+                        </div>
+                        <div class="six columns">
+                            <label>E-mail address</label>
+                            <input type="text" name="email" class="smoothborder" placeholder="Your e-mail address *" maxlength="500"/>
+                        </div>
+                        <label>Message</label>
+                        <textarea id= "vvf" name="message" class="smoothborder ctextarea" rows="8" placeholder="Message, feedback, comments *"></textarea>
+                        <input type="submit" id="submit" class="readmore" value="Submit" name="submit">
+                    </div>
+                </form>
+
+                <div class="hr"></div>
+                <h5 id="find_on_web">Or Find Me on Web</h5>
+                <div class="sociallist six columns">
+                    <table class="webcontacttable">
+                        <tr>
+                            <td><span class="socialgithub"></span>GitHub</td>
+                            <td>:</td>
+                            <td><a href="https://github.com/rajababu3">rajababu3</a></td>
+                        <tr/>
+                        <tr>
+                            <td><span class="socialfacebook"></span>Facebook</td>
+                            <td>:</td>
+                            <td><a href="https://www.facebook.com/rajababu3333">Raja Babu</a></td>
+                        <tr/>
+                        <tr>
+                            <td><span class="socialgoogle"></span>Google+</td>
+                            <td>:</td>
+                            <td><a href="https://plus.google.com/u/1/+RajaBabuofficial">Raja Babu</a></td>
+                        <tr/>
+                        <tr>
+                            <td><span class="socialquora"></span>Quora</td>
+                            <td>:</td>
+                            <td><a href="https://www.quora.com/profile/Raja-Babu-36">Raja Babu</a></td>
+                        <tr/>
+                    </table>
+                </div>
+                <div class="sociallist six columns">
+                    <table class="webcontacttable">
+                        <tr>
+                            <td><span class="socialskype"></span>Skype</td>
+                            <td>:</td>
+                            <td><a href="skype:dextro2729?call">Call Raja Babu</a></td>
+                        <tr/>
+                        <tr>
+                            <td><span class="sociallinkedin"></span>LinkedIn</td>
+                            <td>:</td>
+                            <td><a href="https://in.linkedin.com/in/rajababu3">Raja Babu</a></td>
+                        <tr/>
+                        <tr>
+                            <td><span class="socialtwitter"></span>Twitter</td>
+                            <td>:</td>
+                            <td><a href="https://twitter.com/getupraja">@getupraja</a></td>
+                        <tr/>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hr"></div>
+{% endblock %}
+{% block scripts %}{% endblock %}
