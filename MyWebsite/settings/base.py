@@ -25,7 +25,7 @@ SECRET_KEY = 'edf(w-i#p*o4)(*91u4d7zd0@2d19ubxi0t-)g@2)&)6t!)vz9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
